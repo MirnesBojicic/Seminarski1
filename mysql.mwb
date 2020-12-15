@@ -1,0 +1,118 @@
+# Tut 3.
+#1.
+
+select jobTitle
+from employees;
+
+#2.
+select FirstName, LastName 
+from employees
+where jobTitle= "VP Marketing";
+
+#3.
+select* from employees
+where firstName like "j%e";
+
+#4.
+select* from employees
+where employeeNumber>1300 and jobTitle="Sales Rep"  
+order by FirstName DESC;
+
+#5.
+select* from employees
+where reportsTo is null;
+
+#6.
+select*from payments
+where amount between 2000 and 3000
+order by  paymentDate ASC;
+
+ #tut 4.
+ 
+ #1.
+ SELECT e1.firstName as ime_uposlenika, e1.lastName as prezime_uposlenika, e1. employeeNumber as id_uposlenika, e2. Firstname as menadjer
+from employees e1
+inner JOIN employees e2
+on e1.reportsTo=e2.employeeNumber
+order by e2.firstName DESC;
+
+#2.
+select concat(e.firstName, ' ',e.lastName) AS Uposlenik, e.employeeNumber, o.officeCode
+from employees e
+left join offices o
+on e.officeCode=o.officeCode;
+
+#3.
+select concat(e.firstName, ' ', e.lastName, ' ', e.employeeNumber, ' ', e.jobTitle) AS Uposlenik,
+concat(o.officeCode,' ',o.territory) AS Odjel
+from employees e, offices o
+where e.jobTitle='Sales Rep' and o.territory='NA' and o.officeCode=e.officeCode;
+
+#4.
+select c.contactFirstName as ime_korisnika, c.contactLastName as prezime_korisnika, c.customerNumber as id_korisnika, o.status
+from customers c
+inner join orders o
+on c.customerNumber=o.customerNumber 
+where o.status='Shipped';
+
+#5.
+select concat(c.contactLastName,' ', c.contactFirstName) AS Korisnik, o.*, od.quantityOrdered
+from customers c
+inner join orders o
+on c.customerNumber=o.customerNumber 
+inner join orderdetails od
+on o.orderNumber=od.orderNumber
+where o.status='Shipped' and od.quantityOrdered>30;
+
+#6.
+select concat(c.contactLastName,' ', c.contactFirstName,' ',c.customerNumber) AS Korisnik, c.city as Grad, c.creditLimit as 'Limit kredita', 
+concat(e.employeeNumber,' ', e.firstName,' ', e.lastName) as Zaposlenik
+from customers c
+inner join employees e
+on e.employeeNumber=c.salesRepEmployeeNumber
+where c.creditLimit>2000 and (c.city like 'A%' or  c.city like 'B%')
+order by c.city;
+
+#7.
+select distinct p.productCode as 'ID proizvoda',
+	   p.productName as Proizvod
+from products p
+inner join orderdetails od
+on od.productCode=p.productCode
+inner join orders o
+on od.orderNumber=o.orderNumber
+where p.quantityInStock>1000 
+and (p.productLine="Classic Cars" or p.productLine="Vintage Cars")
+and o.status="Shipped";
+#8.
+select distinct c.*, p.amount
+from customers c
+inner join payments p
+on p.customerNumber=c.customerNumber
+where p.amount>2000;
+
+#9.
+select e.firstName as Ime,
+	   e.lastName as Prezime,
+       e.employeeNumber as ID,
+       e.reportsTo as 'ID menadzera'
+from employees e
+inner join employees e1
+on e.reportsTo = e1.employeeNumber;
+
+#10.
+select c.ContactfirstName as Ime, c.ContactLastname as Prezime, c.city
+from customers c
+inner join employees e
+on c.salesRepEmployeeNumber=e.employeeNumber
+inner join offices o
+on e.officeCode=o.officeCode
+where o.country in ("France", "UK");
+
+#11.
+select  e.firstName as Ime, e.Lastname as Prezime
+from employees e
+left join customers c
+on c.salesRepEmployeeNumber=e.employeeNumber
+where c. salesRepEmployeeNumber is null;
+
