@@ -1,0 +1,12 @@
+uposlenik_id,prezime ,ime ,telefon,email,titula,plata,datum_zaposljenja,nadredjeni ,poslovnica_id
+1,Smith ,Colin ,62111111,colin.smith@gmail.com,1,5000,2020-01-01,,1
+2,Schleiker ,Andrea,62111112,andrea.schleiker@gmail.com,2,2000,2020-01-15,,2
+3,Coley ,Gavin,62111113,coley.gavin@gmail.com,2,2000,2020-01-15,,3
+4,Keane,Tina,62111114,tina.keane@gmail.com,3,1500,2020-02-01,,2
+5,Higgins ,Richard ,62111115,richard.higgins@gmail.com,3,1500,2020-02-01,,1
+6,Joselit ,David,62111116,david.joselit@gmail.com,3,1500,2020-03-17,,1
+7,Morgan ,Susan ,62111117,susan.morgan@gmail.com,3,1500,2020-03-17,,3
+8,Little ,Julia,62111118,julia.little@gmail.com,3,1500,2020-03-29,,2
+9,Hill,Graham,62111119,graham.hill@gmail.com,3,1500,2020-07-12,,1
+10,Nelson ,Mike,62111120,mike.nelson@gmail.com,3,1500,2020-08-15,,3
+11,Kerr,Andrew,62111121,andrew.kerr@gmail.com,2,2000,2020-09-14,,1
