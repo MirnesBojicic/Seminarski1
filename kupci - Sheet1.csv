@@ -1,0 +1,11 @@
+kupac_id,komentar,poslovnica_id,broj_sasije,kupac_id,uposlenik_id
+1,Bilo je solidno,1,1,1,"1,2,3,4,5"
+2,Nemam komentara,2,2,2,"6,7,8"
+3,Odlična usluga,3,3,3,"9,10,11"
+4,Imam nekih zamjerki,4,4,4,"12,13"
+5,Jefitne cijene,5,5,5,"14,15,16"
+6,Nikakvih problema nije bilo,6,6,6,"17,18,19"
+7,Bez zamjerki,1,7,7,"1,2,3,4,5"
+8,Nema problema,3,8,8,"12,13"
+9,Dobra auta i dobre cijene,2,9,9,"6,7,8"
+10,Odlično,5,10,10,"1,2,3,4,5"
