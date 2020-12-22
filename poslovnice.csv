@@ -1,0 +1,7 @@
+poslovnice_id,naziv_poslovnice,grad,adresa,telefon,profit,faktura_id,uposlenik_id,radno_vrijeme,broj_sasije
+1,SarajevoExpertStup,Sarajevo,Hifzi Bjelvca 11,38733524169,140000,"1,7,6,15,11","1,2,3,4,5",7001600,
+2,SarajevoExpertOtes,Sarajevo,Prijedorska 27,38733225883,120000,"2,3,8,9,10","6,7,8",7001700,
+3,MostarExpert,Mostar,Marsala Tita 2,38733970881,90000,"4,5,16,17,18","9,10,11",8001500,
+4,BanjaLukaExpert,Banja Luka,Hujica 22,38733201103,25000,"12,13,14","12,13",8001500,
+5,BihacExpert,Bihać,Put Armije 1,38733254813,20000,"19,20,21,22","14,15,16",8001500,
+6,TuzlaExpert,Tuzla,Bosne Srebrene 60,38733480129,40000,"23,24,25,26,27,28","17,18,19",8001500,
